@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import Sujet1 from '@/components/Sujet/Sujet1.vue'
 import Sujet2 from '@/components/Sujet/Sujet2.vue'
 import Sujet3 from './Sujet/Sujet3.vue'
@@ -8,8 +7,6 @@ import TabPanel from 'primevue/tabpanel'
 import Card from 'primevue/card'
 import Badge from 'primevue/badge'
 import Chip from 'primevue/chip'
-
-const sujetActuel = ref(1)
 </script>
 
 <template>
