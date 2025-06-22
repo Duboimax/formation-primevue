@@ -1,8 +1,6 @@
 import { definePreset } from '@primeuix/themes'
 import Aura from '@primeuix/themes/aura'
 import PrimeVue from 'primevue/config'
-import ConfirmationService from 'primevue/confirmationservice'
-import ToastService from 'primevue/toastservice'
 import type { App, Plugin } from 'vue'
 
 const defaultPreset = definePreset(Aura, {
@@ -34,19 +32,6 @@ const defaultPreset = definePreset(Aura, {
             900: 'var(--color-primevue-900)',
         },
     },
-    components: {
-        button: {
-            root: {
-                borderRadius: 0
-            }
-        },
-        inputtext: {
-            root: {
-                borderRadius: 0,
-                borderColor: "#EE82EE"
-            }
-        }
-    }
 })
 
 const PrimeVueManager: Plugin = {
@@ -63,8 +48,6 @@ const PrimeVueManager: Plugin = {
                 },
             },
         })
-        app.use(ToastService)
-        app.use(ConfirmationService)
     },
 }
 
