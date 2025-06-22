@@ -4,6 +4,10 @@ import Sujet2 from '@/components/Sujet/Sujet2.vue'
 import Sujet3 from './Sujet/Sujet3.vue'
 import Sujet4 from './Sujet/Sujet4.vue'
 import TabPanel from 'primevue/tabpanel'
+import Tab from 'primevue/tab'
+import Tabs from 'primevue/tabs'
+import TabList from 'primevue/tablist'
+import TabPanels from 'primevue/tabpanels'
 import Card from 'primevue/card'
 import Badge from 'primevue/badge'
 import Chip from 'primevue/chip'
@@ -37,7 +41,7 @@ import Chip from 'primevue/chip'
                             <Badge value="15 min" severity="success" />
                         </div>
                     </Tab>
-                    <Tab value="4">
+                    <Tab value="2">
                         <div class="flex items-center gap-2">
                             <i class="fas fa-table text-purple-500"></i>
                             <span>Sujet 3</span>
