@@ -1,35 +1,15 @@
-@import './base.css';
+@import "tailwindcss";
+@import "tailwindcss-primeui";
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+@theme {
+  --color-primevue-50: #f0f9ff;
+  --color-primevue-100: #e0f2fe;
+  --color-primevue-200: #bae6fd;
+  --color-primevue-300: #7dd3fc;
+  --color-primevue-400: #38bdf8;
+  --color-primevue-500: #0ea5e9;
+  --color-primevue-600: #0284c7;
+  --color-primevue-700: #0369a1;
+  --color-primevue-800: #075985;
+  --color-primevue-900: #0c4a6e;
 }
