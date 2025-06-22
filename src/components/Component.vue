@@ -8,7 +8,6 @@ import TabPanels from 'primevue/tabpanels'
 import Card from 'primevue/card'
 import Badge from 'primevue/badge'
 import Chip from 'primevue/chip'
-
 </script>
 
 <template>
