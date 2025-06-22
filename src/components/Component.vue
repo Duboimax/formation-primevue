@@ -1,9 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import Sujet1 from '@/components/Sujet/Sujet1.vue'
-import Sujet2 from '@/components/Sujet/Sujet2.vue'
-import Sujet3 from './Sujet/Sujet3.vue'
-import Sujet4 from './Sujet/Sujet4.vue'
 import TabView from 'primevue/tabview'
 import TabPanel from 'primevue/tabpanel'
 import Card from 'primevue/card'
@@ -26,7 +23,6 @@ const sujetActuel = ref(1)
 
     <div class="container mx-auto px-6 mb-8">
       <TabView v-model:activeIndex="sujetActuel" class="w-full">
-        
         <TabPanel>
           <template #header>
             <div class="flex items-center gap-2">
@@ -72,160 +68,8 @@ const sujetActuel = ref(1)
               </div>
             </template>
           </Card>
-          
+
           <Sujet1 />
-        </TabPanel>
-
-        <TabPanel>
-          <template #header>
-            <div class="flex items-center gap-2">
-              <i class="fas fa-edit text-green-500"></i>
-              <span>Sujet 2</span>
-              <Badge value="15 min" severity="success" />
-            </div>
-          </template>
-          
-          <Card class="mb-6">
-            <template #title>
-              <div class="flex items-center gap-3">
-                <i class="fas fa-clipboard-list text-2xl text-green-500"></i>
-                Exercice 2 : Formulaire Simple
-              </div>
-            </template>
-            
-            <template #content>
-              <div class="space-y-4">
-                <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-400">
-                  <h3 class="font-semibold text-green-800 mb-2">🎯 Objectif</h3>
-                  <p class="text-green-700">Gestion des formulaires et validation basique</p>
-                </div>
-                
-                <div class="bg-gray-50 p-4 rounded-lg">
-                  <h3 class="font-semibold mb-3">📋 Consignes :</h3>
-                  <ol class="list-decimal list-inside space-y-2 text-gray-700">
-                    <li>Créer 2 <Chip label="InputText" class="text-xs mx-1" /> : nom et email</li>
-                    <li>Ajouter une validation (champs requis + format email)</li>
-                    <li>Afficher les erreurs en rouge sous les champs</li>
-                    <li>Toast d'erreur si invalide, de succès si valide</li>
-                    <li>Enfin modifier le design token du bouton et de l'inputText pour qu'il n'y ai plus de border radius et modifier la couleur de la bordure pour l'inputtext </li>
-                  </ol>
-                </div>
-                
-                <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-400">
-                  <h3 class="font-semibold text-green-800 mb-2">💡 Composants à utiliser</h3>
-                  <div class="flex flex-wrap gap-2">
-                    <Chip label="InputText" severity="success" />
-                    <Chip label="Button" severity="success" />
-                    <Chip label="Toast" severity="success" />
-                    <Chip label="Validation" severity="success" />
-                  </div>
-                </div>
-              </div>
-            </template>
-          </Card>
-          
-          <Sujet2 />
-        </TabPanel>
-
-        <TabPanel>
-          <template #header>
-            <div class="flex items-center gap-2">
-              <i class="fas fa-table text-purple-500"></i>
-              <span>Sujet 3</span>
-              <Badge value="15 min" severity="warn" />
-            </div>
-          </template>
-          
-          <Card class="mb-6">
-            <template #title>
-              <div class="flex items-center gap-3">
-                <i class="fas fa-users text-2xl text-purple-500"></i>
-                Exercice 3 : Liste avec Dialog
-              </div>
-            </template>
-            
-            <template #content>
-              <div class="space-y-4">
-                <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-400">
-                  <h3 class="font-semibold text-purple-800 mb-2">🎯 Objectif</h3>
-                  <p class="text-purple-700">Affichage de données tabulaires et modales</p>
-                </div>
-                
-                <div class="bg-gray-50 p-4 rounded-lg">
-                  <h3 class="font-semibold mb-3">📋 Consignes :</h3>
-                  <ol class="list-decimal list-inside space-y-2 text-gray-700">
-                    <li>Créer une <Chip label="DataTable" class="text-xs mx-1" /> avec 3 utilisateurs</li>
-                    <li>Colonnes : nom, email, poste + colonne "Actions"</li>
-                    <li>Bouton "Voir" qui ouvre un <Chip label="Dialog" class="text-xs mx-1" /></li>
-                    <li>Le dialog affiche tous les détails de l'utilisateur</li>
-                  </ol>
-                </div>
-                
-                <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-400">
-                  <h3 class="font-semibold text-purple-800 mb-2">💡 Composants à utiliser</h3>
-                  <div class="flex flex-wrap gap-2">
-                    <Chip label="DataTable" severity="warning" />
-                    <Chip label="Column" severity="warning" />
-                    <Chip label="Dialog" severity="warning" />
-                    <Chip label="Button" severity="warning" />
-                  </div>
-                </div>
-              </div>
-            </template>
-          </Card>
-          
-          <Sujet3 />
-        </TabPanel>
-
-        <TabPanel>
-          <template #header>
-            <div class="flex items-center gap-2">
-              <i class="fas fa-calendar-alt text-orange-500"></i>
-              <span>Sujet 4</span>
-              <Badge value="15 min" severity="danger" />
-            </div>
-          </template>
-          
-          <Card class="mb-6">
-            <template #title>
-              <div class="flex items-center gap-3">
-                <i class="fas fa-calendar-check text-2xl text-orange-500"></i>
-                Exercice 4 : Calendrier Popup
-              </div>
-            </template>
-            
-            <template #content>
-              <div class="space-y-4">
-                <div class="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-400">
-                  <h3 class="font-semibold text-orange-800 mb-2">🎯 Objectif</h3>
-                  <p class="text-orange-700">Composants avancés et overlays</p>
-                </div>
-                
-                <div class="bg-gray-50 p-4 rounded-lg">
-                  <h3 class="font-semibold mb-3">📋 Consignes :</h3>
-                  <ol class="list-decimal list-inside space-y-2 text-gray-700">
-                    <li>Bouton "Choisir une date" qui ouvre un <Chip label="OverlayPanel" class="text-xs mx-1" /></li>
-                    <li>L'overlay contient un <Chip label="Calendar" class="text-xs mx-1" /> inline</li>
-                    <li>Afficher la date sélectionnée dans le bouton</li>
-                    <li>Fermer automatiquement l'overlay après sélection</li>
-                    <li>Enfin modifier le design token du bouton pour qu'il n'y ai plus de border radius</li>
-                  </ol>
-                </div>
-                
-                <div class="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-400">
-                  <h3 class="font-semibold text-orange-800 mb-2">💡 Composants à utiliser</h3>
-                  <div class="flex flex-wrap gap-2">
-                    <Chip label="Calendar" severity="danger" />
-                    <Chip label="OverlayPanel" severity="danger" />
-                    <Chip label="Button" severity="danger" />
-                    <Chip label="ref template" severity="danger" />
-                  </div>
-                </div>
-              </div>
-            </template>
-          </Card>
-          
-          <Sujet4 />
         </TabPanel>
       </TabView>
     </div>

@@ -7,7 +7,4 @@ import { Toast, ConfirmDialog } from 'primevue';
   <main class="w-full">
     <Component />
   </main>
-  
-  <Toast />
-  <ConfirmDialog />
 </template>

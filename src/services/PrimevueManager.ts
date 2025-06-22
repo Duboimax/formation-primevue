@@ -34,19 +34,6 @@ const defaultPreset = definePreset(Aura, {
             900: 'var(--color-primevue-900)',
         },
     },
-    components: {
-        button: {
-            root: {
-                borderRadius: 0
-            }
-        },
-        inputtext: {
-            root: {
-                borderRadius: 0,
-                borderColor: "#EE82EE"
-            }
-        }
-    }
 })
 
 const PrimeVueManager: Plugin = {
