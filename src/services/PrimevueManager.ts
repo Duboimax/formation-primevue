@@ -1,8 +1,6 @@
 import { definePreset } from '@primeuix/themes'
 import Aura from '@primeuix/themes/aura'
 import PrimeVue from 'primevue/config'
-import ConfirmationService from 'primevue/confirmationservice'
-import ToastService from 'primevue/toastservice'
 import type { App, Plugin } from 'vue'
 
 const defaultPreset = definePreset(Aura, {
@@ -63,8 +61,6 @@ const PrimeVueManager: Plugin = {
                 },
             },
         })
-        app.use(ToastService)
-        app.use(ConfirmationService)
     },
 }
 
